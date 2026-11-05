@@ -1,6 +1,12 @@
-# TK-Server
+﻿# TK-Server
 
 SIP and GSM server for Windows Server 2022, with a Windows service runtime and a Windows Forms administration interface.
+
+## Network support
+
+TK-Server supports multiple networks and can route SIP telephony between **two separate networks**, as well as to and from a **WAN network**. **WAN/Internet access and SIP telephony can also share the same network and the same network interface.** Separate networks or dedicated interfaces are optional, not a requirement.
+
+Multiple local IP addresses can be configured in the database field `TK_Properties.ServerIP` as a semicolon-separated list, for example `192.168.1.5;192.168.178.5`. This allows the server to use interfaces in separate networks. WAN connectivity additionally requires suitable network routing, firewall/NAT rules and SIP/RTP configuration for the deployment.
 
 ## Requirements
 
@@ -9,6 +15,47 @@ SIP and GSM server for Windows Server 2022, with a Windows service runtime and a
 - Microsoft SQL Server 2022, including the free Express Edition.
 - The NuGet packages and separate library projects listed below.
 - Device drivers and suitable hardware for GSM features; Windows speech components/voices for speech services.
+
+## SQL Server, service account and Windows service
+
+A running **Microsoft SQL Server 2022** instance is required. The free **SQL Server 2022 Express Edition** is supported; the database server is a separate prerequisite, not supplied by the NuGet SQL client libraries.
+
+1. Create the TK-Server database using [TK-Server_DB-INSTALL.sql](Wichtig/SQL+LDAP%28ADS%29/TK-Server_DB-INSTALL.sql). Follow the SQLCMD-mode instructions in the script. It is an initial-installation script and stops if the target database already exists.
+2. Create a dedicated Windows service account named **TK-Server**. Use a local or domain account appropriate to the installation. This Windows identity is separate from the SIP users `user1` to `user5`.
+3. Grant the account **Log on as a service** and the access needed for the program, configuration, logs, media folders and any network resources used by the installation. Configure SQL Server login/database access for the authentication method used by TK-Server.
+4. Register the Windows service named **TK-Server**, using [Install-TK-Server-Service.ps1](Wichtig/SERVICE/Install-TK-Server-Service.ps1) with the intended `TK-Server.exe` path. The service runs the executable with `-startsvc`.
+5. In Windows Services, configure the service to log on with the dedicated TK-Server account and its password before starting it.
+
+The current installation script registers the service and configures automatic startup/recovery. It does **not** create the Windows account or assign it to the service. Account creation, permissions and the service logon identity must therefore be configured separately. Keep the account password out of the README and repository.
+
+The Windows service owns the server runtime. The graphical application administers and displays that runtime.
+
+## GSM/LTE hardware requirement
+
+GSM/mobile-network calls require a suitable **voice-capable LTE modem**, a suitable SIM/mobile contract with voice service, and matching Windows x64 drivers. LTE data connectivity alone does not establish compatibility with this application's telephone and audio paths.
+
+The currently used modem recorded in the DEV database export is:
+
+| Item | Recorded value |
+|---|---|
+| Manufacturer | `SIMCOM INCORPORATED` |
+| Model | **`SIMCOM_SIM8262E-M2`** (SIMCOM SIM8262E-M2) |
+| Windows device name | `SimTech HS-USB Modem 9001` |
+
+**SIMCOM modems work with TK-Server; modems from other manufacturers have not been tested with the project.** The project's earlier compatibility analysis did not identify a modem from another manufacturer offering complete PC telephony / VoLTE support for the intended setup. That analysis led to the purchase of the newer SIMCOM module.
+
+The project operator confirms that **both of the following SIMCOM modems work for PC telephony with this setup**:
+
+| Modem | Form factor / slot | Connection requirement |
+|---|---|---|
+| **SIMCOM SIM8262E-M2** | **M.2 / NGFF** | Requires a separate connection/adapter appropriate to this module and its electrical interface. |
+| **SIMCOM SIM7600G-H** | **Mini PCIe** | Requires a separate connection/adapter appropriate to this module and its electrical interface. |
+
+Each modem needs its own suitable connection. The different form factors are not mechanically interchangeable. A matching slot shape alone does not establish that an adapter provides the required electrical connection, power and access to the modem's control/audio interfaces. This records the project's operating experience; no new hardware test was performed for this README update.
+
+Configure the modem/SIM assignment and the correct AT/audio COM ports in the GSM settings. Voice availability also depends on the modem firmware, drivers and mobile-network service. USB device recognition or an Internet connection alone is not a complete voice-compatibility test.
+
+The hardware identification above was read from `TK_GSM_Modems` in the DEV database backup. SIM identifiers, IMEI values and provider credentials are intentionally not published here. Personal modem/SIM records are not part of the clean database installation template.
 
 ## Dependency versions
 
@@ -95,7 +142,6 @@ These projects are present in the developer repository. Their presence does not 
 | `libtiff` | Local native TIFF source/build, documented in its README and build manifest. | [libtiff/libtiff](https://gitlab.com/libtiff/libtiff), [documentation](https://libtiff.gitlab.io/libtiff/). |
 | `libsrtp` | CMake project `libsrtp3`, version `3.0.0`. | [cisco/libsrtp](https://github.com/cisco/libsrtp); SRTP implementation. A libsrtp3 build must not be treated as an interchangeable `srtp2.dll`. |
 | `srtplib` | Separate local native project linked against OpenSSL crypto and Windows system libraries. | Use this local project and its configured OpenSSL libraries if that implementation is selected; no verified public repository URL is recorded here. |
-| `TKFaxEngineFX` | Separate native project linked against `libtiff.lib` and `libjpeg.lib`; copies `libtiff.dll` and `libjpeg.dll` to its output. | Separate from the directly referenced managed `TKFaxEngine.dll`. It is not declared as a direct reference in the inspected TK-Server.csproj. |
 
 ### SIPSorcery media runtime files
 
