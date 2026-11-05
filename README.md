@@ -1,6 +1,10 @@
 # TK-Server
 This is a SIP and GSM server for windows 2022 server
 
+what you need to run this SIP/GSM server!
+
+MSSQL server 2022 (community is working)
+
 this libs are very important to complile this project
 
 Microsoft.Data.SqIClient (7.1.1)
