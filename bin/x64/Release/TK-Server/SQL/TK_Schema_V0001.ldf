@@ -1,0 +1,100 @@
+dn: CN=TKServer,CN=Schema,CN=Configuration,DC=Homeland,DC=net
+changetype: add
+objectClass: attributeSchema
+cn: TKServer
+lDAPDisplayName: TKServer
+adminDisplayName: TKServer
+attributeId: OIDROOT.1
+attributeSyntax: 2.5.5.12
+omSyntax: 64
+isSingleValued: TRUE
+rangeUpper: 32
+searchFlags: 1
+isMemberOfPartialAttributeSet: FALSE
+showInAdvancedViewOnly: TRUE
+
+
+dn: CN=TKPasswordHash,CN=Schema,CN=Configuration,DC=Homeland,DC=net
+changetype: add
+objectClass: attributeSchema
+cn: TKPasswordHash
+lDAPDisplayName: TKPasswordHash
+adminDisplayName: TKPasswordHash
+attributeId: OIDROOT.2
+attributeSyntax: 2.5.5.12
+omSyntax: 64
+isSingleValued: TRUE
+rangeUpper: 512
+searchFlags: 128
+isMemberOfPartialAttributeSet: FALSE
+showInAdvancedViewOnly: TRUE
+
+
+dn: CN=TKid,CN=Schema,CN=Configuration,DC=Homeland,DC=net
+changetype: add
+objectClass: attributeSchema
+cn: TKid
+lDAPDisplayName: TKid
+adminDisplayName: TKid
+attributeId: OIDROOT.3
+attributeSyntax: 2.5.5.9
+omSyntax: 2
+isSingleValued: TRUE
+searchFlags: 1
+isMemberOfPartialAttributeSet: FALSE
+showInAdvancedViewOnly: TRUE
+
+
+dn: CN=TKNr,CN=Schema,CN=Configuration,DC=Homeland,DC=net
+changetype: add
+objectClass: attributeSchema
+cn: TKNr
+lDAPDisplayName: TKNr
+adminDisplayName: TKNr
+attributeId: OIDROOT.4
+attributeSyntax: 2.5.5.12
+omSyntax: 64
+isSingleValued: TRUE
+rangeUpper: 64
+searchFlags: 1
+isMemberOfPartialAttributeSet: FALSE
+showInAdvancedViewOnly: TRUE
+
+
+dn: CN=Tkactiv,CN=Schema,CN=Configuration,DC=Homeland,DC=net
+changetype: add
+objectClass: attributeSchema
+cn: Tkactiv
+lDAPDisplayName: Tkactiv
+adminDisplayName: Tkactiv
+attributeId: OIDROOT.5
+attributeSyntax: 2.5.5.8
+omSyntax: 1
+isSingleValued: TRUE
+searchFlags: 0
+isMemberOfPartialAttributeSet: FALSE
+showInAdvancedViewOnly: TRUE
+
+
+dn: CN=TKUserExt,CN=Schema,CN=Configuration,DC=Homeland,DC=net
+changetype: add
+objectClass: classSchema
+cn: TKUserExt
+lDAPDisplayName: TKUserExt
+adminDisplayName: TKUserExt
+governsId: OIDROOT.100
+objectClassCategory: 3
+subClassOf: top
+mayContain: TKServer
+mayContain: TKPasswordHash
+mayContain: TKid
+mayContain: TKNr
+mayContain: Tkactiv
+defaultObjectCategory: CN=TKUserExt,CN=Schema,CN=Configuration,DC=Homeland,DC=net
+
+
+dn: CN=User,CN=Schema,CN=Configuration,DC=Homeland,DC=net
+changetype: modify
+add: auxiliaryClass
+auxiliaryClass: TKUserExt
+-

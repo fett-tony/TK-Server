@@ -1,0 +1,156 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+	<TargetFramework>net10.0-windows10.0.17763.0</TargetFramework>
+    <!-- TargetFramework>net8.0-windows10.0.17763.0</TargetFramework -->
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Platforms>x64</Platforms>
+    <PlatformTarget>x64</PlatformTarget>
+    <ApplicationIcon>SRC\APP-icon.ico</ApplicationIcon>
+    <AppConfig>SRC\App.config</AppConfig>
+    <!-- KEIN führender Backslash! Pfad bleibt lokal im Projektordner -->
+    <OutputPath>bin\$(Platform)\$(Configuration)\$(AssemblyName)\bin\</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <PackageReadmeFile>README.MD</PackageReadmeFile>
+	<Version>1.3.0</Version>
+    <AssemblyVersion>1.3.0.0</AssemblyVersion>
+    <FileVersion>1.3.0.0</FileVersion>
+    <StartupObject>TKServer.TKSTART</StartupObject>
+    <RootNamespace>TKServer</RootNamespace>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <Copyright>https://github.com/NuGet/NuGet.Client.git</Copyright>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <AnalysisLevel>latest</AnalysisLevel>
+    <EnforceCodeStyleInBuild>False</EnforceCodeStyleInBuild>
+    <EnableNETAnalyzers>True</EnableNETAnalyzers>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1584;1591;1658</NoWarn>
+    <DocumentationFile>\\homeland.net\dfs\PROFILES\aktony\Documents\source\repos\02_VoIP_Entwicklung\TK-Server\Wichtig\DOKU\dokumentation.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="SRC\APP-icon.ico" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Compile Remove="Wichtig\**" />
+    <EmbeddedResource Remove="Wichtig\**" />
+    <None Remove="Wichtig\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="7.0.1" />
+    <PackageReference Include="NAudio" Version="2.3.0" />
+    <PackageReference Include="SIPSorcery" Version="10.0.6" />
+    <PackageReference Include="SIPSorceryMedia" Version="3.0.1" />
+    <PackageReference Include="SIPSorceryMedia.Abstractions" Version="10.0.6" />
+    <PackageReference Include="SIPSorceryMedia.Encoders" Version="10.0.4" />
+    <PackageReference Include="SIPSorceryMedia.FFmpeg" Version="10.0.5" />
+    <PackageReference Include="SIPSorceryMedia.Windows" Version="10.0.5" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.9.1" />
+    <PackageReference Include="System.Management" Version="10.0.7" />
+    <PackageReference Include="System.IO.Ports" Version="10.0.7" />
+    <PackageReference Include="System.Speech" Version="10.0.7" />
+    <PackageReference Include="System.ServiceProcess.ServiceController" Version="10.0.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="sipcryptlib">
+      <HintPath>..\sipcryptlib\bin\Release\net8.0\sipcryptlib.dll</HintPath>
+    </Reference>
+    <Reference Include="TKFaxEngine">
+      <HintPath>..\TKFaxEngine\bin\x64\Release\net10.0-windows10.0.17763.0\win-x64\TKFaxEngine.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="SRC\Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="SRC\Properties\TKSQL_DB.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>TKSQL_DB.settings</DependentUpon>
+    </Compile>
+    <Compile Update="SRC\Resources\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="SRC\Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="SRC\Resources\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>TKServer.Resources</CustomToolNamespace>
+      <ManifestResourceName>TKServer.Resources.Resources</ManifestResourceName>
+      <LogicalName>TKServer.Resources.Resources.resources</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="SRC\Properties\TKSQL_DB.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>TKSQL_DB.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="SRC\Resources\LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="SRC\Resources\README.MD">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="Wichtig\README.MD">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <!-- Sortiert die Dateien nach dem Build um -->
+  <Target Name="RestructureFiles" AfterTargets="Build">
+    <PropertyGroup>
+      <AppDir>$(TargetDir)..\</AppDir>
+    </PropertyGroup>
+
+    <MakeDir Directories="$(AppDir)lib;$(AppDir)conf;$(AppDir)log;$(AppDir)SQL;$(AppDir)Media;$(AppDir)Media\System;$(AppDir)Media\User" />
+
+    <ItemGroup>
+      <SqlSourceFiles Include="Wichtig\SQL+LDAP(ADS)\**\*" />
+    </ItemGroup>
+
+    <Copy SourceFiles="@(SqlSourceFiles)" DestinationFiles="@(SqlSourceFiles->'$(AppDir)SQL\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" Condition="'@(SqlSourceFiles)' != ''" />
+
+    <ItemGroup>
+      <MoveDlls Include="$(TargetDir)*.dll" Exclude="$(TargetDir)$(AssemblyName).dll" />
+    </ItemGroup>
+    
+    <!-- Copy & Delete ist auf Netzwerklaufwerken sicherer als Move -->
+    <Copy SourceFiles="@(MoveDlls)" DestinationFolder="$(AppDir)lib" />
+    <Delete Files="@(MoveDlls)" />
+
+    <Exec Command="if exist &quot;$(TargetDir)runtimes&quot; xcopy /E /I /Y &quot;$(TargetDir)runtimes&quot; &quot;$(AppDir)lib\runtimes&quot;" />
+    <RemoveDir Directories="$(TargetDir)runtimes" Condition="Exists('$(TargetDir)runtimes')" />
+  </Target>
+
+</Project>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_LastSelectedProfileId>H:\Documents\source\repos\02_VoIP_Entwicklung\TK-Server\SRC\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Update="SRC\FormView\TK_CallLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SRC\FormView\TK_EmergencyCallRule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SRC\FormView\TK_GSMDevice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SRC\FormView\TK_LiveCallState.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SRC\FormView\TK_NumberRouting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SRC\FormView\TK_ProviderAccounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SRC\FormView\TK_Server.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SRC\FormView\TK_ServerEinstellung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SRC\FormView\TK_ServiceLegs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SRC\FormView\TK_Start.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SRC\FormView\TK_StartSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SRC\FormView\TK_VoIPUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

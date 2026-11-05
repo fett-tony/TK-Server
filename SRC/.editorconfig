@@ -1,0 +1,4 @@
+# SRC ist der physische Quellstamm und kein Bestandteil der bestehenden Namespaces.
+[*.cs]
+dotnet_style_namespace_match_folder = false
+dotnet_diagnostic.IDE0130.severity = none

@@ -1,0 +1,70 @@
+﻿[2026.07.27_05:49:26] [INFO] SQL-Datenbank erreichbar | Aufgabe=Logging-Einstellungen laden | DB-abhängige Aktionen werden wieder freigegeben.
+[2026.07.27_05:49:26] [INFO] Logging-Einstellungen geladen | Level=Info | Debug=aus
+[2026.07.27_05:49:26] [INFO] TK-Server gestartet
+[2026.07.27_05:49:26] [INFO] TK_Start Datenbankstatus | SQL-Datenbank erreichbar, Dashboard-Aktionen werden freigegeben.
+[2026.07.27_05:49:26] [INFO] Logging-Einstellungen geladen | Level=Info | Debug=aus
+[2026.07.27_05:49:26] [INFO] RuntimeAreaControl | Bereich=SIPInt | Soll=True | Ist=Error | Fehler=TK_Properties.ServerIP enthält keine lokal bindbare SIP-IP. Konfiguriert=10.140.10.21 | Lokal=::1;10.140.10.1;127.0.0.1;192.168.1.5
+[2026.07.27_05:49:26] [INFO] RuntimeAreaControl | Bereich=Provider | Soll=True | Ist=Error | Fehler=TK_Properties.ServerIP enthält keine lokal bindbare SIP-IP. Konfiguriert=10.140.10.21 | Lokal=::1;10.140.10.1;127.0.0.1;192.168.1.5
+[2026.07.27_05:49:26] [INFO] RuntimeAreaControl | Bereich=GSM | Soll=False | Ist=Stopped | Fehler=
+[2026.07.27_05:49:26] [INFO] RuntimeAreaControl | Bereich=SIPInt | Soll=True | Ist=Error | Fehler=TK_Properties.ServerIP enthält keine lokal bindbare SIP-IP. Konfiguriert=10.140.10.21 | Lokal=::1;10.140.10.1;127.0.0.1;192.168.1.5
+[2026.07.27_05:49:26] [INFO] RuntimeAreaControl | Bereich=Provider | Soll=True | Ist=Error | Fehler=TK_Properties.ServerIP enthält keine lokal bindbare SIP-IP. Konfiguriert=10.140.10.21 | Lokal=::1;10.140.10.1;127.0.0.1;192.168.1.5
+[2026.07.27_05:49:26] [INFO] RuntimeAreaControl | Bereich=GSM | Soll=False | Ist=Stopped | Fehler=
+[2026.07.27_05:49:27] [INFO] TK_Start Dashboard geladen.
+[2026.07.27_05:49:27] [WARN] REJECTED: TK-Service ist nicht installiert | Befehl=GUIOnline
+[2026.07.27_05:49:28] [INFO] GUI wird geschlossen | GUI besitzt keine lokale Telefonie-Runtime. Service-Runtime bleibt gemaess DB-Sollzustand aktiv oder gestoppt.
+[2026.07.28_01:51:00] [INFO] SQL-Datenbank erreichbar | Aufgabe=Logging-Einstellungen laden | DB-abhängige Aktionen werden wieder freigegeben.
+[2026.07.28_01:51:01] [INFO] Logging-Einstellungen geladen | Level=Info | Debug=aus
+[2026.07.28_01:51:01] [INFO] TK-Server gestartet
+[2026.07.28_01:51:01] [INFO] TK_Start Datenbankstatus | SQL-Datenbank erreichbar, Dashboard-Aktionen werden freigegeben.
+[2026.07.28_01:51:01] [INFO] Logging-Einstellungen geladen | Level=Info | Debug=aus
+[2026.07.28_01:51:01] [INFO] RuntimeAreaControl | Bereich=SIPInt | Soll=True | Ist=Error | Fehler=TK_Properties.ServerIP enthält keine lokal bindbare SIP-IP. Konfiguriert=10.140.10.21 | Lokal=::1;10.140.10.1;127.0.0.1;192.168.1.5
+[2026.07.28_01:51:01] [INFO] RuntimeAreaControl | Bereich=Provider | Soll=True | Ist=Error | Fehler=TK_Properties.ServerIP enthält keine lokal bindbare SIP-IP. Konfiguriert=10.140.10.21 | Lokal=::1;10.140.10.1;127.0.0.1;192.168.1.5
+[2026.07.28_01:51:01] [INFO] RuntimeAreaControl | Bereich=GSM | Soll=False | Ist=Stopped | Fehler=
+[2026.07.28_01:51:01] [INFO] RuntimeAreaControl | Bereich=SIPInt | Soll=True | Ist=Error | Fehler=TK_Properties.ServerIP enthält keine lokal bindbare SIP-IP. Konfiguriert=10.140.10.21 | Lokal=::1;10.140.10.1;127.0.0.1;192.168.1.5
+[2026.07.28_01:51:01] [INFO] RuntimeAreaControl | Bereich=Provider | Soll=True | Ist=Error | Fehler=TK_Properties.ServerIP enthält keine lokal bindbare SIP-IP. Konfiguriert=10.140.10.21 | Lokal=::1;10.140.10.1;127.0.0.1;192.168.1.5
+[2026.07.28_01:51:01] [INFO] RuntimeAreaControl | Bereich=GSM | Soll=False | Ist=Stopped | Fehler=
+[2026.07.28_01:51:01] [INFO] TK_Start Dashboard geladen.
+[2026.07.28_01:51:01] [WARN] REJECTED: TK-Service ist nicht installiert | Befehl=GUIOnline
+[2026.07.28_01:51:03] [INFO] GUI wird geschlossen | GUI besitzt keine lokale Telefonie-Runtime. Service-Runtime bleibt gemaess DB-Sollzustand aktiv oder gestoppt.
+[2026.07.28_01:51:44] [INFO] SQL-Datenbank erreichbar | Aufgabe=Logging-Einstellungen laden | DB-abhängige Aktionen werden wieder freigegeben.
+[2026.07.28_01:51:44] [INFO] Logging-Einstellungen geladen | Level=Info | Debug=aus
+[2026.07.28_01:51:44] [INFO] TK-Server gestartet
+[2026.07.28_01:51:44] [INFO] TK_Start Datenbankstatus | SQL-Datenbank erreichbar, Dashboard-Aktionen werden freigegeben.
+[2026.07.28_01:51:44] [INFO] Logging-Einstellungen geladen | Level=Info | Debug=aus
+[2026.07.28_01:51:44] [INFO] RuntimeAreaControl | Bereich=SIPInt | Soll=True | Ist=Error | Fehler=TK_Properties.ServerIP enthält keine lokal bindbare SIP-IP. Konfiguriert=10.140.10.21 | Lokal=::1;10.140.10.1;127.0.0.1;192.168.1.5
+[2026.07.28_01:51:44] [INFO] RuntimeAreaControl | Bereich=Provider | Soll=True | Ist=Error | Fehler=TK_Properties.ServerIP enthält keine lokal bindbare SIP-IP. Konfiguriert=10.140.10.21 | Lokal=::1;10.140.10.1;127.0.0.1;192.168.1.5
+[2026.07.28_01:51:44] [INFO] RuntimeAreaControl | Bereich=GSM | Soll=False | Ist=Stopped | Fehler=
+[2026.07.28_01:51:44] [INFO] RuntimeAreaControl | Bereich=SIPInt | Soll=True | Ist=Error | Fehler=TK_Properties.ServerIP enthält keine lokal bindbare SIP-IP. Konfiguriert=10.140.10.21 | Lokal=::1;10.140.10.1;127.0.0.1;192.168.1.5
+[2026.07.28_01:51:44] [INFO] RuntimeAreaControl | Bereich=Provider | Soll=True | Ist=Error | Fehler=TK_Properties.ServerIP enthält keine lokal bindbare SIP-IP. Konfiguriert=10.140.10.21 | Lokal=::1;10.140.10.1;127.0.0.1;192.168.1.5
+[2026.07.28_01:51:44] [INFO] RuntimeAreaControl | Bereich=GSM | Soll=False | Ist=Stopped | Fehler=
+[2026.07.28_01:51:44] [INFO] TK_Start Dashboard geladen.
+[2026.07.28_01:51:44] [WARN] REJECTED: TK-Service ist nicht installiert | Befehl=GUIOnline
+[2026.07.28_01:51:47] [INFO] GUI wird geschlossen | GUI besitzt keine lokale Telefonie-Runtime. Service-Runtime bleibt gemaess DB-Sollzustand aktiv oder gestoppt.
+[2026.07.28_10:51:58] [INFO] SQL-Datenbank erreichbar | Aufgabe=Logging-Einstellungen laden | DB-abhängige Aktionen werden wieder freigegeben.
+[2026.07.28_10:51:58] [INFO] Logging-Einstellungen geladen | Level=Info | Debug=aus
+[2026.07.28_10:51:58] [INFO] TK-Server gestartet
+[2026.07.28_10:51:58] [INFO] TK_Start Datenbankstatus | SQL-Datenbank erreichbar, Dashboard-Aktionen werden freigegeben.
+[2026.07.28_10:51:59] [INFO] Logging-Einstellungen geladen | Level=Info | Debug=aus
+[2026.07.28_10:51:59] [INFO] RuntimeAreaControl | Bereich=SIPInt | Soll=True | Ist=Error | Fehler=TK_Properties.ServerIP enthält keine lokal bindbare SIP-IP. Konfiguriert=10.140.10.21 | Lokal=::1;10.140.10.1;127.0.0.1;192.168.1.5
+[2026.07.28_10:51:59] [INFO] RuntimeAreaControl | Bereich=Provider | Soll=True | Ist=Error | Fehler=TK_Properties.ServerIP enthält keine lokal bindbare SIP-IP. Konfiguriert=10.140.10.21 | Lokal=::1;10.140.10.1;127.0.0.1;192.168.1.5
+[2026.07.28_10:51:59] [INFO] RuntimeAreaControl | Bereich=GSM | Soll=False | Ist=Stopped | Fehler=
+[2026.07.28_10:51:59] [INFO] RuntimeAreaControl | Bereich=SIPInt | Soll=True | Ist=Error | Fehler=TK_Properties.ServerIP enthält keine lokal bindbare SIP-IP. Konfiguriert=10.140.10.21 | Lokal=::1;10.140.10.1;127.0.0.1;192.168.1.5
+[2026.07.28_10:51:59] [INFO] RuntimeAreaControl | Bereich=Provider | Soll=True | Ist=Error | Fehler=TK_Properties.ServerIP enthält keine lokal bindbare SIP-IP. Konfiguriert=10.140.10.21 | Lokal=::1;10.140.10.1;127.0.0.1;192.168.1.5
+[2026.07.28_10:51:59] [INFO] RuntimeAreaControl | Bereich=GSM | Soll=False | Ist=Stopped | Fehler=
+[2026.07.28_10:52:00] [INFO] TK_Start Dashboard geladen.
+[2026.07.28_10:52:00] [WARN] REJECTED: TK-Service ist nicht installiert | Befehl=GUIOnline
+[2026.07.28_10:52:22] [INFO] GUI wird geschlossen | GUI besitzt keine lokale Telefonie-Runtime. Service-Runtime bleibt gemaess DB-Sollzustand aktiv oder gestoppt.
+[2026.07.28_11:45:03] [INFO] SQL-Datenbank erreichbar | Aufgabe=Logging-Einstellungen laden | DB-abhängige Aktionen werden wieder freigegeben.
+[2026.07.28_11:45:03] [INFO] Logging-Einstellungen geladen | Level=Info | Debug=aus
+[2026.07.28_11:45:03] [INFO] TK-Server gestartet
+[2026.07.28_11:45:04] [INFO] TK_Start Datenbankstatus | SQL-Datenbank erreichbar, Dashboard-Aktionen werden freigegeben.
+[2026.07.28_11:45:04] [INFO] Logging-Einstellungen geladen | Level=Info | Debug=aus
+[2026.07.28_11:45:04] [INFO] RuntimeAreaControl | Bereich=SIPInt | Soll=True | Ist=Error | Fehler=TK_Properties.ServerIP enthält keine lokal bindbare SIP-IP. Konfiguriert=10.140.10.21 | Lokal=::1;10.140.10.1;127.0.0.1;192.168.1.5
+[2026.07.28_11:45:04] [INFO] RuntimeAreaControl | Bereich=Provider | Soll=True | Ist=Error | Fehler=TK_Properties.ServerIP enthält keine lokal bindbare SIP-IP. Konfiguriert=10.140.10.21 | Lokal=::1;10.140.10.1;127.0.0.1;192.168.1.5
+[2026.07.28_11:45:04] [INFO] RuntimeAreaControl | Bereich=GSM | Soll=False | Ist=Stopped | Fehler=
+[2026.07.28_11:45:04] [INFO] RuntimeAreaControl | Bereich=SIPInt | Soll=True | Ist=Error | Fehler=TK_Properties.ServerIP enthält keine lokal bindbare SIP-IP. Konfiguriert=10.140.10.21 | Lokal=::1;10.140.10.1;127.0.0.1;192.168.1.5
+[2026.07.28_11:45:04] [INFO] RuntimeAreaControl | Bereich=Provider | Soll=True | Ist=Error | Fehler=TK_Properties.ServerIP enthält keine lokal bindbare SIP-IP. Konfiguriert=10.140.10.21 | Lokal=::1;10.140.10.1;127.0.0.1;192.168.1.5
+[2026.07.28_11:45:05] [INFO] RuntimeAreaControl | Bereich=GSM | Soll=False | Ist=Stopped | Fehler=
+[2026.07.28_11:45:05] [INFO] TK_Start Dashboard geladen.
+[2026.07.28_11:45:05] [WARN] REJECTED: TK-Service ist nicht installiert | Befehl=GUIOnline
+[2026.07.28_11:45:09] [INFO] GUI wird geschlossen | GUI besitzt keine lokale Telefonie-Runtime. Service-Runtime bleibt gemaess DB-Sollzustand aktiv oder gestoppt.
