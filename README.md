@@ -2,6 +2,8 @@
 
 SIP and GSM server for Windows Server 2022, with a Windows service runtime and a Windows Forms administration interface.
 
+[![Deutsches Erklärungsvideo](Dokumentation/Vorschaubild.png)](Dokumentation/TK-Server_Soll-Ablauf_mit_Sprache.mp4)
+
 ## Network support
 
 TK-Server supports multiple networks and can route SIP telephony between **two separate networks**, as well as to and from a **WAN network**. **WAN/Internet access and SIP telephony can also share the same network and the same network interface.** Separate networks or dedicated interfaces are optional, not a requirement.
