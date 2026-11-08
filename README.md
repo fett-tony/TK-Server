@@ -2,7 +2,7 @@
 
 SIP and GSM server for Windows Server 2022, with a Windows service runtime and a Windows Forms administration interface.
 
-[![Deutsches Erklärungsvideo](Dokumentation/Vorschaubild.png)](https://github.com/fett-tony/TK-Server/blob/69091a426c696141afecd99d68494d2737b5dd33/Wichtig/TK-Server_Target-Call-Flows_English.mp4)
+[![Deutsches Erklärungsvideo](Dokumentation/Vorschaubild.png)](Wichtig/TK-Server_Target-Call-Flows_English.mp4)
 
 ## Network support
 
